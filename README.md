@@ -24,7 +24,7 @@ Limitations
 - First pass render looks ugly.
 - Currently requires a fixed column height to be specified rather than calculating this from the containing element.
 
-See the [demo]()
+See the [demo](https://djskinner.github.io/react-column-wrap/)
 
 ### Props
 
