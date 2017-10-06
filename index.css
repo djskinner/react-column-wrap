@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 24px;
+  font-family: sans-serif
+}
+
+button {
+  overflow: hidden;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 14px 80px;
+  cursor: pointer;
+  color: #000;
+  background-color: #00A6FF;
+  font-weight: 800;
+  border: 1px solid #fff;
+  box-shadow: 0;
+  transition: height 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+
+button.add-remove {
+    font-size: 2rem;
+}
