@@ -1,0 +1,35 @@
+{
+  "env": {
+    "development": {
+      "plugins": ["ramda"],
+      "presets": [
+        ["env", {
+            "targets": { "browsers": ["last 2 versions"] }
+        }],
+        "stage-0",
+        "react"
+      ]
+    },
+    "production": {
+      "plugins": ["ramda"],
+      "presets": [
+        ["env", {
+            "targets": { "browsers": ["last 2 versions"] }
+        }],
+        "stage-0",
+        "react"
+      ]
+    },
+    "es": {
+      "plugins": ["ramda"],
+      "presets": [
+        ["env", {
+            "targets": { "browsers": ["last 2 versions"] },
+            "modules": false
+        }],
+        "stage-0",
+        "react"
+      ]
+    }
+  }
+}

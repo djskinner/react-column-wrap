@@ -1,0 +1,81 @@
+{
+  "name": "react-column-wrap",
+  "version": "0.0.1",
+  "description": "Column layout react component with wrapping.",
+  "main": "lib/index.js",
+  "module": "lib/es/index.js",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "scripts": {
+    "lint": "eslint --ext .js ./src ./example",
+    "build:lib": "babel src --out-dir lib",
+    "build:es": "BABEL_ENV=es babel src --out-dir lib/es",
+    "build": "npm run build:lib && npm run build:es && NODE_ENV=production webpack --config webpack.prod.config.js",
+    "dev": "NODE_ENV=development webpack-dev-server --inline --hot --progress --colors --host 0.0.0.0 --devtool eval",
+    "postbuild": "NODE_ENV=production webpack --config webpack.prod.config.js",
+    "prebuild": "rm -rf dist && mkdir dist",
+    "prepublish": "npm run build",
+    "deploy": "NODE_ENV=production webpack && git-directory-deploy --directory example --branch gh-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/djskinner/react-column-wrap"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "layout",
+    "column",
+    "flexbox"
+  ],
+  "author": "Daniel Skinner <dan@atomx.io> (http://atomx.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/djskinner/react-column-wrap/issues"
+  },
+  "homepage": "https://github.com/djskinner/react-column-wrap",
+  "peerDependencies": {
+    "react": ">0.13.0",
+    "react-dom": ">0.13.0"
+  },
+  "dependencies": {
+    "prop-types": "15.6.0",
+    "ramda": "0.24.1",
+    "react-measure": "2.0.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "devDependencies": {
+    "autoprefixer": "7.1.4",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.0.1",
+    "babel-loader": "7.1.2",
+    "babel-plugin-ramda": "1.4.3",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "css-loader": "0.28.7",
+    "eslint": "4.8.0",
+    "eslint-config-airbnb": "15.1.0",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "7.4.0",
+    "git-directory-deploy": "1.5.1",
+    "http-server": "0.10.0",
+    "node-libs-browser": "2.0.0",
+    "node-sass": "4.5.3",
+    "postcss-loader": "2.0.6",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "react-motion": "0.5.2",
+    "sass-loader": "6.0.6",
+    "style-loader": "0.19.0",
+    "webpack": "3.6.0",
+    "webpack-dev-server": "2.9.1"
+  }
+}
