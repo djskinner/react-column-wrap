@@ -1,6 +1,6 @@
 {
   "name": "react-column-wrap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Column layout react component with wrapping.",
   "main": "lib/index.js",
   "module": "lib/es/index.js",
