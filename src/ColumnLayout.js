@@ -84,7 +84,7 @@ class ColumnLayout extends Component {
         return (
             <div style={{ ...this.props.style, ...getContainerStyle(containerWidth, columnHeight) }} className={this.props.className}>
                 {items.map(item => (
-                    <div style={getItemStyle(itemPositions[item.key], this.state.sizes[item.key])}>
+                    <div key={item.key} style={getItemStyle(itemPositions[item.key], this.state.sizes[item.key])}>
                         <Measure
                             bounds
                             key={item.key}
